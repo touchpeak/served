@@ -66,7 +66,13 @@ SET (CMAKE_MODULE_PATH "${MAINFOLDER}/cmake")
 INCLUDE_DIRECTORIES ("${MAINFOLDER}/src")
 
 #
-# Locate Project Prerequisites 
+# wingdi.h interferes with DELETE macro
+# add windows version for boost headers
+#
+ADD_DEFINITIONS(-DNOGDI -D_WIN32_WINNT=0x0601 -DBOOST_USE_WINDOWS_H)
+
+#
+# Locate Project Prerequisites
 #
 FIND_PACKAGE (Boost 1.53 COMPONENTS "system" REQUIRED)
 INCLUDE_DIRECTORIES (${Boost_INCLUDE_DIRS})
@@ -123,5 +129,5 @@ ENDIF (SERVED_BUILD_DEB)
 IF (SERVED_BUILD_RPM)
     INCLUDE(CPackConfigRPM)
 ENDIF (SERVED_BUILD_RPM)
- 
+
 INCLUDE(CPack)
