@@ -43,7 +43,7 @@ find_library(RE2_LIBRARY NAMES ${RE2_NAMES} NO_DEFAULT_PATH PATHS
   /lib/x86_64-linux-gnu
   /usr/lib/i386-linux-gnu
   /usr/lib/x86_64-linux-gnu
-  C:/re2/bin/Release
+  C:/re2/bin/Debug
 )
 
 if (RE2_INCLUDE_DIR AND RE2_LIBRARY)

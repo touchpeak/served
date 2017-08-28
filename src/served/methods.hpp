@@ -23,6 +23,8 @@
 #ifndef SERVED_METHODS_HPP
 #define SERVED_METHODS_HPP
 
+#undef DELETE
+
 #include <string>
 #include <stdexcept>
 
