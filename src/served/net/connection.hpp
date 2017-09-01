@@ -23,12 +23,21 @@
 #ifndef SERVED_CONNECTION_HPP
 #define SERVED_CONNECTION_HPP
 
+
 #include <boost/asio.hpp>
 
 #include <served/multiplexer.hpp>
 #include <served/response.hpp>
 #include <served/request.hpp>
 #include <served/request_parser_impl.hpp>
+
+// Because of the order of windows.h and WinSock.h,
+// mingw mutex files must be placed here and loaded
+// efter <mutex>
+
+#include <mutex>
+#include <mingw.mutex.h>
+#include <mingw.thread.h>
 
 #include <array>
 #include <memory>

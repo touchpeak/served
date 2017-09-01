@@ -24,7 +24,6 @@
 #define SERVED_CONNECTION_MANAGER_HPP
 
 #include <set>
-#include <mutex>
 
 #include "connection.hpp"
 

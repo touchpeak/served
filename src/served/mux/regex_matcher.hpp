@@ -24,8 +24,9 @@
 #define SERVED_PATH_REGEX_MATCHER_HPP
 
 #include <string>
+#include <regex>
 
-#include <re2/re2.h>
+// #include <re2/re2.h>
 
 #include <served/mux/segment_matcher.hpp>
 
@@ -39,7 +40,7 @@ namespace served { namespace mux {
 class regex_matcher : public segment_matcher
 {
 	const std::string _variable_name;
-	re2::RE2          _regex;
+	std::regex          _regex;
 
 public:
 	/*
