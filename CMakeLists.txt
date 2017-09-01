@@ -86,7 +86,7 @@ SET(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 # Locate Project Prerequisites
 #
 # FIND_PACKAGE (Boost 1.53 COMPONENTS "system" REQUIRED)
-INCLUDE_DIRECTORIES (${Boost_INCLUDE_DIRS} /usr/local/include)
+INCLUDE_DIRECTORIES (${Boost_INCLUDE_DIRS} /usr/local/include /usr/i686-w64-mingw32/local/include)
 LINK_DIRECTORIES (${Boost_LIBRARY_DIRS})
 
 INCLUDE (FindRAGEL)
